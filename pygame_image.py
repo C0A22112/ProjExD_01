@@ -18,12 +18,13 @@ def main():
             if event.type == pg.QUIT: return
             
         x = tmr % 3200
+        y = 100
         screen.blit(bg_img, [x , 0])
         
         for i in range(4):
             screen.blit(bg_imgs[i], [1600*i-x, 0])
         
-        if tmr % 2 == 1:
+        if tmr % y >= y/2:
             screen.blit(kk_imgs, [300, 200])
         else:
             screen.blit(kk_img, [300, 200])
